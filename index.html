@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f3ed"><title>moonjang — практика грамматики</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#"><span class="brand-mark">문</span><span>moonjang<span class="brand-light"> / study</span></span></a><div class="top-actions"><span class="local-tag"><i></i> Локальная библиотека</span><button id="theme-toggle" class="icon-btn" aria-label="Сменить тему" title="Сменить тему">☼</button></div></header>
+  <main class="shell">
+    <section id="home-view">
+      <div class="hero"><div class="hero-copy"><p class="eyebrow">ЛИЧНАЯ ПРАКТИКА · 한국어</p><h1>Грамматика,<br><em>которая становится вашей.</em></h1><p class="hero-desc">Переводите в своём темпе, пишите от руки и замечайте, как новые конструкции оживают в контексте.</p></div><div class="hero-stamp"><span>오늘도</span><b>조금씩</b><small>понемногу — каждый день</small></div></div>
+      <section class="create-card"><div class="create-icon">＋</div><div class="create-main"><label for="grammar-input">Добавить грамматическую тему</label><p>Введите конструкцию на корейском или её название</p><div class="create-row"><input id="grammar-input" placeholder="Например: -기는 하지만" autocomplete="off"><button id="create-btn" class="primary-btn">Создать упражнения <span>↗</span></button></div><div id="create-status" class="status" aria-live="polite"></div></div></section>
+      <div class="library-head"><div><p class="eyebrow">ВАША КОЛЛЕКЦИЯ</p><h2>Библиотека <span id="topic-count" class="count-pill">0</span></h2></div><div class="library-tools"><label class="search"><span>⌕</span><input id="search-input" placeholder="Найти тему…"></label><button id="export-btn" class="subtle-btn">Экспорт ↓</button><button id="import-btn" class="subtle-btn">Импорт ↑</button><input id="import-file" type="file" accept="application/json,.json" hidden></div></div>
+      <div id="library" class="library"></div>
+      <div id="empty-state" class="empty-state"><div class="empty-art"><span>가</span><span>나</span><span>다</span></div><h3>Начните с одной конструкции</h3><p>Созданные темы и ваш прогресс сохраняются в этом браузере.<br>Для создания заданий нужен подключённый ИИ-сервис.</p></div>
+      <footer class="footer"><span>Ваши занятия — ваши данные.</span><span>Сохраняется локально в браузере</span></footer>
+    </section>
+    <section id="study-view" class="study-view" hidden>
+      <button id="back-btn" class="back-btn">← Библиотека</button>
+      <div class="study-heading"><div><p class="eyebrow">УЧЕБНАЯ ТЕМА</p><h1 id="study-title"></h1></div><div id="study-progress" class="progress-summary"></div></div>
+      <details class="analysis-card"><summary>Разбор грамматики</summary><div id="analysis-content" class="analysis-content"></div></details><div class="study-toolbar"><nav class="tabs" role="tablist"><button class="tab active" data-tab="kk-ko">Қазақша <span>→</span> 한국어</button><button class="tab" data-tab="ko-kk">한국어 <span>→</span> Қазақша</button><button class="tab" data-tab="answers">Жауаптар <span>/</span> Ответы</button></nav><div class="study-actions"><button id="print-btn" class="subtle-btn">Печать</button><button id="reset-btn" class="subtle-btn">Сбросить прогресс</button></div></div>
+      <div id="answer-warning" class="answer-warning" hidden><button id="reveal-all-btn" class="primary-btn small">Показать ответы</button></div>
+      <div id="exercise-list" class="exercise-list"></div>
+    </section>
+  </main></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="js/seed-data.js"></script><script src="js/seed-tenikka.js"></script><script src="js/seed-geolyo.js"></script><script src="js/seed-jul-alda.js"></script><script src="js/storage.js"></script><script src="js/generator.js"></script><script src="js/app.js"></script>
+</body></html>
+
+
+
+
+
+
+
+
